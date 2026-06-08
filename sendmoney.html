@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Send Money</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstraps js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Alky-Wallet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">Login</a>
+                    <a class="nav-link" href="menu.html">Menu</a>
+                    <a class="nav-link" href="deposit.html">Deposit</a>
+                    <a class="nav-link active" aria-current="page" href="sendmoney.html">Send Money</a>
+                    <a class="nav-link" href="transactions.html">Transactions</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 class="mt-5 text-center text-primary-emphasis">Enviar Dinero</h1>
+    </header>
+    <main class="container py-4">
+        <section class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-4">
+                <p class="mb-0 text-center">Dinero en Cuenta:</p>
+                <p class="fw-bold fs-1 text-center">$<span>60.000</span></p>
+                <form>
+                    <div class="mb-3">
+                        <label for="contacto" class="form-label">Buscar en la agenda de transferencias:</label>
+                        <!-- <input type="search" class="form-control" name="contacto" id="contacto"
+                            placeholder="Buscar un Contacto" required> -->
+                        <select class="form-select" id="inputGroupSelect01" required>
+                            <option selected>Buscar un Contacto</option>
+                            <option value="1">María Pérez</option>
+                            <option value="2">Pablo Hernández</option>
+                            <option value="3">José Cordova</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="Agregar nuevo Contacto" class="btn btn-info my-1 col-12">
+                    </div>
+                    <div class="mb-3">
+                        <h2 class="fs-2 text-primary-emphasis">Contactos</h2>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">
+                                María Pérez CBU: 123456789, Alias: maria.perez, Banco: ABC Bank
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                            <label class="form-check-label" for="radioDefault2">
+                                Pablo Hernández CBU: 987654321, Alias: pablo.hernandez, Banco: XYZ Bank
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                            <label class="form-check-label" for="radioDefault3">
+                                José Cordova CBU: 112233445, Alias: jose.cordova, Banco: ABC Bank
+                            </label>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="monto" class="form-label">Monto a transferir:</label>
+                        <input type="number" class="form-control" min="500" placeholder="Ingrese el monto a transferir"
+                            id="monto" required>
+                        <div id="passwordHelpBlock" class="form-text">
+                            Monto mínimo de Transferencia: $500.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="Enviar dinero" class="btn btn-info my-1 col-12">
+                    </div>
+                </form>
+                    <div class="mb-3">
+                        <a href="./menu.html" class="btn btn-dark my-1 col-12">Volver al Menú Principal</a>
+                    </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
