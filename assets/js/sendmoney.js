@@ -52,9 +52,8 @@ let { id, nombre, cbu, alias, banco } = contacto;
 
 //AQUÍ VAMOS ACUMULANDO TANTOS LI COMO CONTACTOS TENGAMOS
 acumuladorLi += `
-<li class="list-group-item">
-<input class="form-check-input me-1" type="radio" name="contacto" value="${cbu}" id="contacto${id}" required>
-
+<li class="list-group-item d-flex gap-3">
+<input class="form-check-input " type="radio" name="contacto" value="${cbu}" id="contacto${id}" required>
 <label class="form-check-label" for="contacto${id}">${nombre}, CBU:
 ${cbu}, Alias: ${alias}, Banco: ${banco}</label>
 </li>
@@ -142,7 +141,6 @@ return;
 
 let cbuContacto = dataFormulario.get("contacto");
 
-console.log("CBU", cbuContacto);
 //VALIDAR SI EXISTE SALDO DISPONIBLE Y DESCONTAR DE SER POSIBLE
 
 if(balance >= monto){

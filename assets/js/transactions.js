@@ -4,6 +4,14 @@
                     <li class="list-group-item border border-info">Compra en línea - $5550.0</li>
                     <li class="list-group-item border border-info">Depósito misma cuenta - $10500.0</li>
                     <li class="list-group-item border border-info">Transferencia recibida - $7575.00</li>*/
+//SIMULAMOS LA CARGA DE UN BALANCE INICIAL
+let balance = 100000;
+
+//CAPTURAMOS EL ELEMENTO DEL DOM EN CUAL QUEREMOS MOSTRAR EL BALANCE
+const balanceEl = document.getElementById("balance");
+
+//LE ASIGNAMOS EL VALOR SIMULADO DE LA BASE DE DATOS
+balanceEl.textContent = balance.toLocaleString("es-CL");
 
 //Historial de transacciones (simula BD)
 let transacciones =[
