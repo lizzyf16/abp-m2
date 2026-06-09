@@ -40,6 +40,19 @@ banco: "XYZ Bank",
 },
 ];
 
+//
+const nombres = ["Buscar un Contacto","John Doe", "Jane Smith", "María Pérez", "José Cordova"];
+
+const select = document.getElementById("buscarContacto");
+
+nombres.forEach(nombre => {
+    const opcion = document.createElement("option");
+    opcion.value = nombre.toLowerCase();
+    opcion.textContent = nombre;
+    select.appendChild(opcion);
+});
+//
+
 //FUNCIÓN QUE SE VA A ENCARGAR DE CARGAR LOS CONTACTOS EN LA UL DEL DOM
 function cargarContactos(listaContactos){
 
@@ -57,6 +70,7 @@ acumuladorLi += `
 <label class="form-check-label" for="contacto${id}">${nombre}, CBU:
 ${cbu}, Alias: ${alias}, Banco: ${banco}</label>
 </li>
+                            
 `;
 };
 

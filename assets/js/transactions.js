@@ -36,7 +36,7 @@ for (const transaccion of transacciones){
 let elementosLi = "";
 for (const transaccion of transacciones) {
 
-elementosLi += `<li class="list-group-item border border-info">${transaccion.glosa} - $${transaccion.monto}</li>`;
+elementosLi += `<li class="list-group-item px-4 border border-info">${transaccion.glosa} - $${transaccion.monto}</li>`;
 }
 
 //ASIGNAR LOS ELEMENTOS A LA UL DEL DOM

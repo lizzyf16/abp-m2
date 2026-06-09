@@ -18,22 +18,17 @@ Cómo ejecutar
 
 Opción rápida: abrir index.html en un navegador.
 Servir localmente (recomendado para evitar restricciones de CORS al usar fetch u otras APIs):
-# desde la raíz del proyecto
-python -m http.server 8000
-# o con Node (si tienes http-server instalado)
-npx http-server -c-1 . 8000
-Luego abrir http://localhost:8000 en el navegador.
 
-Estructura del proyecto (resumen):
+# Estructura del proyecto (resumen):
 
-index.html — Página principal.
-login.html — Formulario de inicio de sesión; controla la validación con assets/js/login.js.
+index.html — Login de Inicio, formulario de inicio de sesión; controla la validación con assets/js/login.js.
 menu.html — Menú / dashboard de la wallet.
 deposit.html — Interfaz de depósito.
 sendmoney.html — Interfaz para enviar dinero.
 transactions.html — Lista de transacciones.
 assets/css/style.css — Estilos personalizados.
-assets/js/ — Lógica cliente: login.js, menu.js, deposit.js, sendmoney.js, transactions.js, transactions2.js.
+assets/js/ — Lógica cliente: login.js, menu.js, deposit.js, sendmoney.js, transactions.js.
+
 Notas de implementación
 
 La autenticación es simulada (credenciales en assets/js/login.js) y redirige a menu.html al iniciar sesión correctamente.
@@ -46,4 +41,4 @@ Proponer PRs con cambios pequeños y documentados.
 Licencia y contacto
 
 Proyecto de ejemplo — sin licencia explícita. Añadir una licencia si se planea publicar.
-Autor: (añadir nombre y contacto si lo deseas).
+Autor: (Liz Mary Fernández Marccucci, Proyecto Módulo 2).
