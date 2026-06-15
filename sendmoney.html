@@ -45,44 +45,47 @@
             <div class="col-12 col-md-8 col-lg-4">
                 <p class="mb-0 text-center">Dinero en Cuenta:</p>
                 <p class="fw-bold fs-1 text-center">$<span id="balance"></span></p>
+                <div class="mb-3">
+                    <button id="abrirFormulario" class="btn btn-primary col-12">Agregar usuario</button>
+
+                    <div id="modal" class="mi-modal mb-3 justify-content-center">
+                        <div class="contenido-modal">
+                            <h3 class="text-center pb-3">Agregar nuevo contacto</h3>
+
+                            <input type="text" id="nombre" placeholder="Nombre y Apellido" class="col-12">
+                            <br><br>
+                            <input type="number" id="numeroCBU" placeholder="Número de CBU" class="col-12">
+                            <br><br>
+                            <input type="text" id="alias" placeholder="Alias" class="col-12">
+                            <br><br>
+                            <input type="text" id="nombreBanco" placeholder="Nombre del Banco" class="col-12">
+                            <br><br>
+                            <div class="justify-content-center d-flex gap-1 align-items-lg-center">
+                                <button onclick="guardar()" class="btn btn-info my-1 col-6">Guardar</button>
+                                <button onclick="cerrar()" class="btn btn-dark my-1 col-6">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button id="btnAbrir" class="btn btn-primary">Agregar nuevo contacto</button> -->
+                </div>
                 <form id="formSendMoney">
                     <div class="mb-3">
                         <!-- <label for="buscarContacto"  class="form-label">Buscar en la agenda de transferencias:</label> -->
                         <!-- <input type="text" class="form-control" name="buscarContacto" id="buscarContacto"
                             placeholder="Buscar un Contacto"> -->
-                        <select class="form-select" name="buscarContacto" id="buscarContacto" for="buscarContacto" required>
+                        <select class="form-select" name="buscarContacto" id="buscarContacto" for="buscarContacto"
+                            required>
                             <!-- <option selected>Buscar un Contacto</option>
                             <option ></option> -->
                             <!-- <option value="2">Pablo Hernández</option>
                             <option value="3">José Cordova</option> -->
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <button id="btnAbrir" class="btn btn-primary">Agregar nuevo contacto</button>
-                    </div>
+
                     <div class="mb-3">
                         <h2 class="fs-2 text-primary-emphasis">Contactos</h2>
-                        <!-- <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                            <label class="form-check-label" for="radioDefault1">
-                                María Pérez CBU: 123456789, Alias: maria.perez, Banco: ABC Bank
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
-                            <label class="form-check-label" for="radioDefault2">
-                                Pablo Hernández CBU: 987654321, Alias: pablo.hernandez, Banco: XYZ Bank
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
-                            <label class="form-check-label" for="radioDefault3">
-                                José Cordova CBU: 112233445, Alias: jose.cordova, Banco: ABC Bank
-                            </label>
-                        </div> -->
                         <ul class="list-group" id="listaContactos">
                         </ul>
-
                     </div>
                     <div class="mb-3">
                         <label for="monto" class="form-label">Monto a transferir:</label>

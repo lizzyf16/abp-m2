@@ -1,0 +1,16 @@
+.mi-modal {
+    display:none;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.5);
+}
+
+.contenido-modal {
+    background: white;
+    width: 550px;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 8px;
+    z-index: 1;
+}

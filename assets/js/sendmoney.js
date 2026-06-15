@@ -52,39 +52,48 @@ nombres.forEach(nombre => {
     select.appendChild(opcion);
 });
 //
-function formNuevocontacto() {
-    let formNew = "";
 
-    formNew += `
-    <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre y apellido:</label>
-                        <input type="email" class="form-control" name="name" id="name"
-                            placeholder="Introduce Nombre y apellido" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="number" class="form-label">número de CBU:</label>
-                        <input type="numer" class="form-control" name="CBU" id="cbu"
-                            placeholder="Introduce número de CBU" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="nickname" class="form-label">Alias:</label>
-                        <input type="email" class="form-control" name="alias" id="alias"
-                            placeholder="Introduce Alias" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="banco" class="form-label">Nombre del Banco:</label>
-                        <input type="email" class="form-control" name="banco" id="banco"
-                            placeholder="Introduce Nombre del Banco" required>
-                    </div>
-                    <div>
-                        <input type="submit" value="Agregar Contacto" class="btn btn-info my-1 col-12 mb-3">
-                    </div>
-                </form>
-    `;
+const modal = document.getElementById("modal");
 
+document.getElementById("abrirFormulario")
+
+    .addEventListener("click", () => {
+        
+        modal.style.display = "block";
+    });
+
+function cerrar() {
+    modal.style.display = "none";
 };
-//FORMULARIO
+
+function guardar() {
+    const nombre = document.getElementById("nombre").value;
+    const CBU = document.getElementById("numeroCBU").value;
+    const alias = document.getElementById("alias").value;
+    const banco = document.getElementById("nombreBanco").value;
+
+    const contactoNuevo = {
+        nombre,
+        CBU,
+        alias,
+        banco
+
+    };
+
+    const contactoGuardados =
+    JSON.parse(localStorage.getItem("contactos")) || [];
+
+    const contactosActualizados = [
+    ...contactoGuardados,
+    contactoNuevo
+];
+
+localStorage.setItem(
+    "contactos",
+    JSON.stringify(contactosActualizados)
+);
+};
+
 
 
 
@@ -101,8 +110,8 @@ function cargarContactos(listaContactos) {
         //AQUÍ VAMOS ACUMULANDO TANTOS LI COMO CONTACTOS TENGAMOS
         acumuladorLi += `
 
-<li class="list-group-item d-flex gap-3">
-<input class="form-check-input " type="radio" name="contacto" value="${cbu}" id="contacto${id}" required>
+<li class="list-group-item d-flex gap-3" >
+<input class="form-check-input " required type="radio" name="contacto" value="${cbu}" id="contacto${id}">
 <label class="form-check-label" for="contacto${id}">${nombre}, CBU:
 ${cbu}, Alias: ${alias}, Banco: ${banco}</label>
 </li>
@@ -120,6 +129,8 @@ function main() {
 };
 
 main();
+    cerrar();
+
 
 //LÓGICA BUSCAR CONTACTO CON FILTRO DE CONTACTOS
 
